@@ -4,7 +4,8 @@ import Search from "./components/search.js";
 import ShowInfo from "./components/show-info";
 import "./App.css";
 
-const API_key = process.env.API_key;
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
 const App = () => {
 	const [info, setInfo] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +13,7 @@ const App = () => {
 
 	useEffect(() => {
 		const option = {
-			url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`,
+			url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`,
 			method: "get",
 		};
 		const fetchInfo = async () => {
