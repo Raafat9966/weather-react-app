@@ -4,8 +4,7 @@ import Search from "./components/search.js";
 import ShowInfo from "./components/show-info";
 import "./App.css";
 
-let API_key = "80be18e54f8ac0910f0fb43798263427";
-
+const API_key = process.env.API_key;
 const App = () => {
 	const [info, setInfo] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
